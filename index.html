@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#FFF]">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 5</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <!-- NavBar start -->
+  <nav class="flex w-screen justify-center items-center text-center raleway mb-5">
+    <div class="navbar md:container md:m-auto">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn bg-stone-50 lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+        </div>
+        <a class="text-gray-950 font-extrabold text-3xl">P-Ticket</a>
+      </div>
+      <div class="navbar-center hidden lg:flex raleway">
+        <ul class="menu menu-horizontal px-1 text-slate-600 font-medium">
+          <li><a>Home</a></li> 
+          <li><a>About</a></li>
+          <li><a>Destination</a></li>
+          <li><a>Search</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <button class="btn font-bold">
+          Bus
+          <img src="./images/bus-icon.png" alt="">
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Top banner start -->
+  <header class="Container raleway">
+    <div class="hero h-[520px] object-fill rounded-2xl" style="background-image: url(./images/banner.png);">
+      <div class=""></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-['700px']">
+          <h1 class="mb-5 text-6xl text-white font-bold">End-to-End Travel with</h1>
+          <h1 class="mb-5 text-5xl text-green-500 font-bold">P Paribahan</h1>
+          <p class="mb-5 text-zinc-100">Yes, you can run unit tests and view the results directly within the app. The
+            integrated testing features allow for a streamlined.</p>
+          <button onclick="buyTicket()" id="letMeInTicket" class="btn btn-primary bg-green-400 font-bold ">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Top banner end -->
+
+
+  <main class="md:container md:m-auto raleway">
+    <!-- Best offer for you start -->
+    <div class="mt-24 mb-14">
+      <h1 class="text-4xl text-center text-gray-950 font-bold">Best offers for you</h1>
+    </div>
+    <div class="offers-container text-[#030712CC] grid grid-cols-4 divide-x-2">
+      <div class="15off bg-[#FFBF0F] h-50 w-70 p-14 rounded-bl-lg rounded-tl-lg">
+        <h5 class="text-3xl font-extrabold">15% OFF</h5>
+        <p class="text-1xl font-bold">on your next purchase</p>
+        <span>use by January 2024</span>
+      </div>
+      <div class="new15 bg-[#FFBF0F] h-50 w-70 flex flex-col items-center justify-center rounded-tr-lg rounded-br-lg">
+        <h4 class="text-2xl font-bold">NEW15</h4>
+        <p>Coupone code</p>
+      </div>
+      <div class="20off bg-[#F78C9C] h-50 w-70 p-14 rounded-bl-lg rounded-tl-lg">
+        <h5 class="text-3xl font-extrabold">20% OFF</h5>
+        <p class="text-1xl font-bold">on your next purchase</p>
+        <span>use by January 2024</span>
+      </div>
+      <div
+        class="couple20 bg-[#F78C9C] h-50 w-70 flex flex-col items-center justify-center rounded-tr-lg rounded-br-lg">
+        <h4 class="text-2xl font-bold">Couple 20</h4>
+        <p>Coupone code</p>
+      </div>
+    </div>
+    <div class="div flex items-center justify-center mt-14">
+      <button class="btn btn-outline btn-success">See All Offers</button>
+    </div>
+
+    <!-- Best offer for you End -->
+
+    <!-- PH Paribahan seat functionality start -->
+    <div id="BuyTicket" class="hero border-t-2 rounded-3xl border-lime-600 mt-10 mb-10">
+      <div class="hero-content text-center mt-16 inter">
+        <div class="max-w-xl ">
+          <h2 class="text-5xl font-bold text-black ">P.H Paribahan</h2>
+          <p class="mt-5 text-gray-700">Yes, you can run unit tests and view the results directly within the app. The
+            integrated testing features allow for a streamlined .</p>
+        </div>
+      </div>
+    </div>
+    <!-- greenline paribahan info banner -->
+    <div class="greenline-container flex">
+      <div class="greenline-paribahan bg-white text-neutral-900 w-[900px]">
+        <div class="flex">
+          <div><img class="w-15 h-10" src="./images/bus-logo.png" alt=""></div>
+          <div class="paribahan-title">
+            <h3 class="text-2xl font-bold ml-5 mr-[430px]">Greenline Paribahan</h3>
+            <p class="ml-5 mt-2 inter">Coach-009-WEB ! AC_Business</p>
+          </div>
+          <div class="bg-yellow-100 text-[#1DD100] font-bold flex items-center rounded-md p-5">
+            <img class="w-6 h-6" src="./images/seat-green.png" alt="">
+            <span class="">40 Seats left</span>
+          </div>
+        </div>
+        <div class="routing raleway flex justify-between font-medium text-[#03071299] mt-8">
+          <p class="ml-5">Route</p>
+          <P class="text-gray-900 font-semibold">Dhaka-Sylhet</P>
+        </div>
+        <div class="timing flex justify-between font-medium text-[#03071299] mt-8">
+          <p class="ml-5">Departure Time</p>
+          <p class="text-gray-900 font-semibold">9:00 PM</p>
+        </div>
+        <div class="location flex text-black justify-between font-semibold mt-8">
+          <p class="bg-slate-200 rounded-md p-2">Boarding Point - Laxmipur</p>
+          <p class="bg-slate-200  rounded-md p-2">Dropping Point - Bogura</p>
+          <p class="bg-slate-200 rounded-md p-2">Est. Time - 11 Hour</p>
+        </div>
+      </div>
+      <div class="ticket-price font-medium mt-8 text-center ml-36">
+        <div class="flex items-center justify-center"><img class="" src="./images/fare.png" alt=""></div>
+        <h3 class="text-3xl font-extrabold mt-4 text-black">550 Taka</h3>
+        <p class="text-xl font-semibold mt-4 text-gray-600">Per Seat</p>
+      </div>
+    </div>
+    <!-- main seating and ticket billing system -->
+    <div class="ticket-section flex">
+    <div class="w-2/3">
+      <div class="seat-and-ticket-confirm-container w-[700px] mt-10 ">
+        <div class="select-your-seat">
+          <h3 class="text-2xl font-bold text-gray-950">Select Your Seat</h3>
+        </div>
+        <hr class="mt-3">
+        <div class="availableand-selected flex justify-between mt-5 mb-3">
+          <div class="available flex">
+            <img class="w-8 h-8" src="./images/seat-gray.png" alt="">
+            <p class="ml-2 font-bold text-slate-400">Available</p>
+          </div>
+          <div class="selected flex">
+            <img class="w-8 h-8" src="./images/seat-green-filled.png" alt="">
+            <span class="ml-2 font-bold text-green-400">Selected</span>
+          </div>
+        </div>
+        <hr class="mb-5">
+        <div class="flex justify-end">
+          <img class="bg-slate-200 rounded-lg p-3" src="./images/tabler-icon-steering-wheel.png" alt="">
+        </div>
+      </div>
+
+      <!-- seat positioning -->
+      <div class="seat-positioning w-[700px] mt-10 row-span-1">
+        <div class="flex gap-20 my-1 w-full mb-8 inter font-medium text-slate-500">
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">A</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">A1</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">A2</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">A3</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">A4</kbd>
+        </div>
+        <div class="flex gap-20 my-1 w-full mb-8 inter font-medium text-slate-500">
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">B</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">B1</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">B2</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">B3</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">B4</kbd>
+        </div>
+        <div class="flex gap-20 my-1 w-full inter font-medium text-slate-500">
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">C</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">C1</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">C2</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">C3</kbd>
+          <kbd class="kbd w-28 h-12 bg-slate-200 p-4">C4</kbd>
+        </div>
+      </div>
+
+    </div>
+    <!-- ticket pricing and billing system -->
+    <div class="ticket-billing mt-8">
+      <h3 class="text-2xl font-bold text-gray-950 mb-5">Select Your Seat</h3>
+
+      <hr class="mb-5 mt-5">
+      <div class="selected-seat-and-price w-full bg-slate-200 p-10 rounded-md mt-10">
+        <div class="flex w-full justify-around gap-24 mb-6 font-semibold text-gray-900 inter">
+          <h4>Seat <span class="text-green-500">0</span></h4>
+          <h4>Class</h4>
+          <h4>Price</h4>
+        </div>
+        <div class="flex w-full justify-around gap-24 mb-3 text-base font-semibold text-gray-400 inter">
+          <span>C2</span>
+          <p>Economy</p>
+          <p>550</p>
+        </div>
+        <div class="flex w-full justify-around gap-24 text-base font-semibold text-gray-400 inter">
+          <span>C2</span>
+          <p>Economy</p>
+          <p>550</p>
+        </div>
+        <div class="total-price flex justify-between mt-5 font-bold text-gray-900 inter">
+          <h4>Total Price</h4>
+          <h4>BDT <span>1100</span></h4>
+        </div>
+
+        <div class="coupone-code inter mt-5">
+          <div>
+            <label for="hs-trailing-button-add-on" class="sr-only">Label</label>
+            <div class="flex rounded-lg shadow-sm">
+              <input type="text" placeholder="Hava Any Coupone?" id="hs-trailing-button-add-on"
+                name="hs-trailing-button-add-on"
+                class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+              <button type="button"
+                class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-green-600 text-white hover:text-gray-900 border-none transition hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                Button
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grand-total flex justify-between mt-5 font-bold text-gray-900 inter">
+          <h4>Grand Toatal</h4>
+          <h4>BDT <span>1100</span></h4>
+        </div>
+      </div>
+      <div class="passenger-info inter mt-8 w-full">
+        <h5 class="mb-5 text-xl font-bold text-black">Passenger Name*</h5>
+        <input type="text" placeholder="Enter Your Name" id="hs-trailing-button-add-on" name="hs-trailing-button-add-on"
+          class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+        <h5 class="mt-5 mb-5 text-xl font-bold text-black">Phone Number*</h5>
+        <input type="number" placeholder="Enter Your Name" id="hs-trailing-button-add-on" name="hs-trailing-button-add-on"
+          class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+        <h5 class="mt-5 mb-5 text-xl font-bold text-black">Email ID*</h5>
+        <input type="email" placeholder="Enter Your Name" id="hs-trailing-button-add-on" name="hs-trailing-button-add-on"
+          class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+        <button class="btn btn-success w-full mt-5">Next</button>
+        <div class="terms&condition flex justify-around mt-5 mb-5 font-normal text-slate-500">
+          <a class="underline" href="">Terms and conditon</a>
+          <a class="underline" href="">Cancelling Policy</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Success screen -->
+    <div class="success-screen Container grid place-items-center w-[900px] h-[400px] justify-center text-center bg-gray-200 roboto text-gray-900 rounded-2xl mb-10">
+      <div class="dive flex justify-center">
+        <img src="./images/success.png" alt="">
+      </div>
+      <h4 class="text-xl w-[500px] font-semibold">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you</h4>
+      <p class="text-base">Shortly you will find a confirmation in your email.</p>
+      <button class="btn btn-success rounded-full">Continue</button>
+
+    </div>
+  </main>
+  <footer class="bg-[#030712] w-full p-20">
+    <div class="flex justify-between">
+      <div class="">
+      <h1 class="raleway text-3xl font-bold text-white mb-5">P Ticket</h1>
+      <p class="w-96 inter">P-Ticket is a digital platform to make your daily commuting better.</p>
+    </div>
+    <div class="inter text-xl font-medium text-white">
+      <h5 class="mb-3 text-center">Download our app</h5>
+      <img src="./images/Group 104.png" alt="">
+    </div>
+    </div>
+    
+    <hr class="mb-5 mt-5">
+    
+    <span class="">@all rights reserved, P-Ticket services limited.2024</span>
+    <div class="flex gap-9 justify-end">
+      <a href="">Terms and conditon</a>
+      <a href="">Return & Return Policy</a>
+      <a href="">Privacy Policy</a>
+    </div>
+  </footer>
+  <script>
+    function buyTicket() {
+    var goToBuyTicket = document.getElementById("letMeInTicket");
+    console.log(goToBuyTicket);
+      if ( goToBuyTicket.click === true ){
+        const showTicket = document.getElementById('BuyTicket');
+        return showTicket;
+      }
+  }
+  </script>
+</body>
+
+</html>
